@@ -1,16 +1,64 @@
-# umi project
+# 任务管理系统项目
+## 实现功能介绍
+使用umi搭建React应用，任务管理系统（使用Class组件实现）
+包括以下基本功能
+* 一、任务管理
+  * 属性：标题、描述、类型、优先级、状态、作者、指派人（除描述外，全部必填）
+  * 场景：列表、创建、编辑更新、删除、详情查看
+  * 主页面：
+  任务列表、右侧查看详情、弹出窗口新建/编辑
+* 二、属性后台管理
+  * 类型管理
+  属性：名称；必填，唯一
+  场景：列表方式的增删改
+  * 优先级管理，同类型操作
+  * 状态，同上
+  * 人员，同上
+* 三、统计后台管理
+  * 各成员的各状态任务单量
 
-## Getting Started
+## 具体实现思路及展示
+* 页面概览
+  * 展示主要页面
+  * ![view](https://github.com/Verahuan/taskManager/blob/master/docs/%E6%A6%82%E8%BF%B0.gif)
+  
+* 任务展示页面（部分功能，其余功能在后面也有相同展示）
 
-Install dependencies,
+  * 侧边弹出：
+  * ![task](https://github.com/Verahuan/taskManager/blob/master/docs/task.gif)
 
-```bash
-$ yarn
-```
+  * 编辑（上面的因为录制问题没展示）
+  * ![edit](https://github.com/Verahuan/taskManager/blob/master/docs/%E7%BC%96%E8%BE%91.gif)
+  
+* 数据管理界面
+  * 数据展示（图表）
+  * ![draw](https://github.com/Verahuan/taskManager/blob/master/docs/%E5%9B%BE%E6%A0%87%E9%83%A8%E5%88%86.gif)
+  
+* 任务管理界面
+  * 编辑+表格
+  * ![manage](https://github.com/Verahuan/taskManager/blob/master/docs/%E7%AE%A1%E7%90%86.gif)
+* 表格删选和搜索功能（实现思路）
+  * 目前没有mock数据，所以暂时没有做这部分
+  * 完成前端处理之后，后端返回处理后的数据，重新渲染表格
+  
+## 结合博客项目的待解决问题：
+* 目前该练习只完成了基本的功能和样式，项目中还有以下问题待解决：
+* 当前项目
+1. 刷新保留在当前页面
+2. 结合后端实现筛选和检索（mock数据和dva结合使用）
+3. 部分样式需要完善
+4. 解析富文本数据
 
-Start the dev server,
+* 博客项目
+1. （解决:都用cssModule,结合antD的全局修改）登录样式单独显示正常（样式：CSSModule），但是加到父组件中之后会被父组件样式覆盖（目前是用！important 或 行内样式解决）
+2. 路由改变的时候都要进行鉴权判断，刷新的时候获取当前用户和页面的信息
+3. （解决：已实现）标签input编辑，后台管理系统有类似功能
+4. （解决，antD全局样式）table的分页器样式修改（批量删除）
+5. （解决：目前的组件还需要更新）antD中文修改
+6. 目前用户文档的content和comment都是写好的特定格式的，需要写好由富文本编辑器内容转换为对应的样式
+7. （结合后端做）做好富文本编辑器的内容判断，防止用户输入html标签，从而出现安全问题
+8. cookie的相关安全设置
+9. 是否登录展示的不同信息，评论的时候需要登录才行
+10. 部分样式需要完善
+11. （解决：flex+其他）各个页面的响应式
 
-```bash
-$ yarn start
-```
-# taskManager
