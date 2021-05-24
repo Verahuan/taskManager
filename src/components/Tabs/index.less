@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'PingFang SC';
+  src: url(/fonts/PingFang.ttf);
+}
+.tab{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+  .tabText{
+    font-family: PingFang SC, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: #595959;
+    margin-bottom: 18px;
+  }
+  .tabBr{
+    width: 24px;
+    height: 3px;
+    border-radius: 1.5px;
+  }
+}
+
+:target{
+  .tabText{
+    color: #0CCCC3;
+  }
+  .tabBr{
+    background-color: #0CCCC3;
+  }
+}

@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'PingFang SC';
+  src: url(/fonts/PingFang.ttf);
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  width: 100vw;
+  background: #ffffff;
+  /* 投影 Shadow-S1 */
+
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.04);
+  .left{
+    margin-left: 20px;
+    display: flex;
+    align-items: flex-end;
+    .logo{
+      font-family: FZZongYi-M05S PingFang SC sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 16px;
+      /* identical to box height */
+
+      letter-spacing: 2px;
+
+      /* 0-中性色 Neutral/N80 */
+
+      color: #262626;
+      align-self: center;
+    }
+  }
+  .right{
+    width: 100px;
+    background-color: darkcyan;
+  }
+}

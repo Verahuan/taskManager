@@ -1,0 +1,25 @@
+.tab{
+  width: 1244px;
+  background: #FFFFFF;
+  /* 投影 Shadow-S1 */
+
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  padding:20px;
+
+  font-family: PingFang SC, serif;
+  :global .ant-tabs-tab-btn{
+    &:hover{
+      color: #0CCCC3;
+    }
+  }
+  :global .ant-tabs-tab-active {
+    .ant-tabs-tab-btn {
+      color: #0CCCC3;
+    }
+  }
+  :global .ant-tabs-ink-bar {
+    background-color: #0CCCC3;
+  }
+}
+

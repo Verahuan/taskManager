@@ -1,0 +1,45 @@
+.input{
+  height: 32px;
+  width: 240px;
+
+  background: #FFFFFF;
+  /* 0-中性色 Neutral/N40 */
+
+  border: 1px solid #D9D9D9;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+.btn{
+  display: flex;
+  align-items: center;
+  width: 112px;
+  height: 32px;
+
+  /* 1-品牌色 Brand/BR50 */
+
+  background: #0CCCC3;
+  float: right;
+  /* 1-品牌色 Brand/BR50 */
+  border-radius: 4px;
+  border-color:#0CCCC3;
+  &:active,
+  &:focus ,
+  &:hover{
+    background:#0CCCC3;
+    border-color:#0CCCC3;
+  }
+}
+.table{
+  :global .ant-pagination {
+    float: right;
+    width: 40%;
+  }
+
+}
+.deleteBtn{
+  position: relative;
+  top:-60px;
+  display: inline;
+  float: left;
+}
